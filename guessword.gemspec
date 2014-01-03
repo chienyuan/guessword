@@ -1,6 +1,7 @@
 Gem::Specification.new do |s|
   s.name        = 'guessword'
   s.version     = '0.0.1'
+  s.add_runtime_dependency 'ffi-aspell', '~> 0.0', '>= 0.0.3'
   s.executables << 'guessword'
   s.date        = '2014-01-02'
   s.summary     = "Guess Word!"
