@@ -1,0 +1,13 @@
+#!/usr/bin/env ruby
+
+require 'guessword'
+if ARGV.length < 2
+  puts "Usage: guess.rb pattern ABCDE... (ex. guess.rb ****Y GERMARY) "
+  exit
+end
+
+
+args = ARGV.clone
+pattern_str = args.shift
+letters_str = args.shift
+Guessword.guess(pattern_str,letters_str)
