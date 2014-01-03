@@ -1,6 +1,6 @@
 Gem::Specification.new do |s|
   s.name        = 'guessword'
-  s.version     = '0.0.1'
+  s.version     = '0.0.2'
   s.add_runtime_dependency 'ffi-aspell', '~> 0.0', '>= 0.0.3'
   s.executables << 'guessword'
   s.date        = '2014-01-02'
@@ -10,6 +10,6 @@ Gem::Specification.new do |s|
   s.email       = 'chienyuan.feng@gmail.com'
   s.files       = ["lib/guessword.rb"]
   s.homepage    =
-    'http://rubygems.org/gems/guessword'
+    'https://github.com/chienyuan/guessword'
   s.license       = 'MIT'
 end
