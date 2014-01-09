@@ -42,7 +42,6 @@ class Guessword
 		puts "Letters = #{letters.join}"
 		puts "Size    = #{size}"
 		puts "Total   = #{total}"
-		puts "Expect time: #{total * 0.007} seconds"
 		
 		puts
 		puts "Output:"
