@@ -1,4 +1,3 @@
-require 'ffi/aspell'
 
 
 class Guessword
@@ -19,7 +18,10 @@ class Guessword
 	#    words: (Array)
 	#
 	def self.guess(pattern_str, letters_str)
-		speller = FFI::Aspell::Speller.new('en_US')
+    dict = Hash.new(false)
+    File.open(File.join(File.dirname(__FILE__),'wordlist.txt'),'r').each_line do |word|
+      dict[word.chop.upcase] = true
+    end
 		pattern  =  pattern_str.upcase.split('').to_a
 		length = 0
 		pattern_flag = false
@@ -59,7 +61,7 @@ class Guessword
 		    else
 		      word = y.join
 		    end
-		    if not words.include?(word) and speller.correct?(word)
+		    if not words.include?(word) and dict[word.upcase]
 		      puts word
 		      words << word 
 		    end
