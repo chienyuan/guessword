@@ -2,7 +2,7 @@
 
 require 'guessword'
 if ARGV.length < 2
-  puts "Usage: guess.rb pattern ABCDE... (ex. guess.rb ****Y GERMARY) "
+  puts "Usage: guessword pattern ABCDE... (ex. guessword ****Y GERMARY) "
   exit
 end
 
